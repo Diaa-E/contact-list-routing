@@ -1,3 +1,5 @@
+import { Link, Outlet } from "react-router-dom";
+
 const Root = ({ }) => {
 
     return (
@@ -29,15 +31,17 @@ const Root = ({ }) => {
                 <nav>
                     <ul>
                         <li>
-                            <a href="contact/1">Your name</a>
+                            <Link to="contact/1">Your name</Link>
                         </li>
                         <li>
-                            <a href="contacts/2">Your friend</a>
+                            <Link to="contacts/2">Your friend</Link>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <div id="detail"></div>
+            <div id="detail">
+                <Outlet />
+            </div>
         </>
     )
 }
